@@ -1,11 +1,15 @@
-const {Schema, model} = require("mongoose");
+const {Schema, model} = require('mongoose');
 
-const userModel = new Schema({
-    email:{type: String, unique: true, required: true},
-    pass:{type: String, unique: false, required: true},
-    mailConfirm:{type: String},
-    isConfirmed:{type: Boolean, default: false},
+const UserModel = new Schema({
 
-})
+    //Mail Confirmation block
+    confirmationLink: {type: String},
+    isConfirmed: {type: Boolean, default: false},
 
-module.exports = model("User", userModel);
+    //Basic auth block
+    email: {type: String, required: true, unique: true},
+    pass: {type: String, required: true}
+
+});
+
+module.exports = model('User', UserModel);
