@@ -1,13 +1,19 @@
 {
-  "name": "server",
-  "version": "1.0.0",
+  "dependencies": {
+    "mongodb": "^4.8.0",
+    "mongoose": "^6.4.4"
+  }
+}
+{
+  "name": "JWT",
+  "version": "0.6.0",
   "description": "",
-  "main": "index.js",
+  "main": "init.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon init.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "ONIQdevv",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
